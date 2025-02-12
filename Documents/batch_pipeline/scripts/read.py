@@ -32,4 +32,4 @@ data = read_from_s3(bucket_name, s3_file_name)
 # If data is loaded successfully, perform basic analysis
 if data is not None:
     print("Data preview:")
-    print(data.head())  # Display the first few rows of the data
+    print(data.head())  # Display the first few rows of the da
