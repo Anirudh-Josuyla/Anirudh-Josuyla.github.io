@@ -3,37 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anirudh Josuyla | Portfolio</title>
+    <title>Anirudh Josuyla | Data Engineer & Business Analyst</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Smooth scrolling
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll("nav a");
+            links.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        });
+    </script>
 </head>
 <body>
 
+    <!-- Navigation Bar -->
     <header>
-        <h1>Anirudh Josuyla</h1>
-        <p>Data Engineer | Business Analyst | ML Enthusiast</p>
         <nav>
+            <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a Data Engineer and Business Analyst with expertise in building real-time ETL pipelines, optimizing financial analytics, and leveraging cloud technologies for data-driven solutions.</p>
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Anirudh Josuyla</h1>
+            <p>Data Engineer | Business Analyst | Machine Learning Enthusiast</p>
+            <a href="https://drive.google.com/file/d/1V90iDgChvzON7DtGQkbOFALyGp9U7nX1/view" target="_blank" class="resume-btn">Download Resume</a>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="https://github.com/Anirudh-Josuyla/project1" target="_blank">Real-Time Data Pipeline with Kafka & Snowflake</a></li>
-            <li><a href="https://github.com/Anirudh-Josuyla/project2" target="_blank">Revenue Forecasting with Machine Learning</a></li>
-            <li><a href="https://github.com/Anirudh-Josuyla/project3" target="_blank">Automated Financial Reporting with Power BI</a></li>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a passionate Data Engineer with expertise in real-time data processing, analytics, and cloud platforms. I specialize in building scalable ETL pipelines, optimizing financial data workflows, and leveraging machine learning for business impact.</p>
+        <h3>Technical Skills</h3>
+        <ul class="skills-list">
+            <li>Python, SQL, Java (Basics)</li>
+            <li>Databricks, Snowflake, Airflow, AWS Glue</li>
+            <li>Power BI, Tableau, Business Objects</li>
+            <li>Real-time Streaming (Kafka, Spark, WebSockets)</li>
+            <li>Cloud: AWS, Azure</li>
         </ul>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="job">
+            <h3>Data Engineer | Greenhouse Juices Ltd</h3>
+            <p>Developed ETL pipelines in Airflow & Snowflake, optimized SQL queries, and built Power BI dashboards improving financial forecasting accuracy by 25%.</p>
+        </div>
+        <div class="job">
+            <h3>Data Engineer | Tritron Technologies Pvt Ltd</h3>
+            <p>Designed real-time data pipelines using Databricks and PySpark, reducing data latency by 25%. Automated data quality validation, improving reporting accuracy by 15%.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3><a href="https://github.com/Anirudh-Josuyla/project1" target="_blank">Real-Time Data Pipeline with Kafka & Snowflake</a></h3>
+            <p>Built a streaming ETL pipeline using Kafka, Snowflake, and Python to process 100M+ transactions in real-time.</p>
+        </div>
+        <div class="project">
+            <h3><a href="https://github.com/Anirudh-Josuyla/project2" target="_blank">Revenue Forecasting with Machine Learning</a></h3>
+            <p>Developed ML models using Python & Databricks, improving revenue predictions and reducing errors by 20%.</p>
+        </div>
+        <div class="project">
+            <h3><a href="https://github.com/Anirudh-Josuyla/project3" target="_blank">Automated Financial Reporting with Power BI</a></h3>
+            <p>Created a fully automated Power BI dashboard using SQL & Snowflake, reducing manual reporting effort by 50%.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact</h2>
+        <h2>Contact Me</h2>
         <p>Email: anirudhjosuyla29@gmail.com</p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/Anirudh-Josuyla/" target="_blank">linkedin.com/in/Anirudh-Josuyla</a></p>
         <p>GitHub: <a href="https://github.com/Anirudh-Josuyla" target="_blank">github.com/Anirudh-Josuyla</a></p>
