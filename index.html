@@ -1,96 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anirudh Josuyla | Data Engineer & Business Analyst</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        // Smooth scrolling
-        document.addEventListener("DOMContentLoaded", function () {
-            const links = document.querySelectorAll("nav a");
-            links.forEach(link => {
-                link.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
-                });
-            });
-        });
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anirudh Josuyla - Data Engineer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <header>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <!-- Home Section -->
-    <section id="home" class="hero">
-        <div class="hero-text">
-            <h1>Anirudh Josuyla</h1>
-            <p>Data Engineer | Business Analyst | Machine Learning Enthusiast</p>
-            <a href="https://drive.google.com/file/d/1V90iDgChvzON7DtGQkbOFALyGp9U7nX1/view" target="_blank" class="resume-btn">Download Resume</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate Data Engineer with expertise in real-time data processing, analytics, and cloud platforms. I specialize in building scalable ETL pipelines, optimizing financial data workflows, and leveraging machine learning for business impact.</p>
-        <h3>Technical Skills</h3>
-        <ul class="skills-list">
-            <li>Python, SQL, Java (Basics)</li>
-            <li>Databricks, Snowflake, Airflow, AWS Glue</li>
-            <li>Power BI, Tableau, Business Objects</li>
-            <li>Real-time Streaming (Kafka, Spark, WebSockets)</li>
-            <li>Cloud: AWS, Azure</li>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">AJ</div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-    </section>
+      </nav>
+      <div class="hero">
+        <h1>Hi, I'm <span>Anirudh Josuyla</span></h1>
+        <p>Data Engineer | Analytics Expert | Process Automation Specialist</p>
+        <a href="#skills" class="btn">Explore My Skills</a>
+      </div>
+    </div>
+  </header>
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>
+            I am a results-driven Data Engineer and Business Analyst passionate about transforming raw data into actionable insights. 
+            I believe in the power of data-driven decision-making, open-source collaboration, and leveraging technology to optimize complex processes.
+        </p>
+        
+        <p>
+            With over three years of experience in data engineering, analytics, and automation, 
+            I have designed and optimized scalable ETL pipelines, real-time data processing frameworks, and cloud-based business intelligence solutions. 
+            My expertise includes Python, SQL, Snowflake, Databricks, and cloud platforms like AWS and Azure.
+        </p>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="job">
-            <h3>Data Engineer | Greenhouse Juices Ltd</h3>
-            <p>Developed ETL pipelines in Airflow & Snowflake, optimized SQL queries, and built Power BI dashboards improving financial forecasting accuracy by 25%.</p>
-        </div>
-        <div class="job">
-            <h3>Data Engineer | Tritron Technologies Pvt Ltd</h3>
-            <p>Designed real-time data pipelines using Databricks and PySpark, reducing data latency by 25%. Automated data quality validation, improving reporting accuracy by 15%.</p>
-        </div>
-    </section>
+        <p>
+            I have worked at Greenhouse Juices Ltd and Tritron Technologies Pvt Ltd, 
+            where I led data pipeline development, revenue assurance analytics, and business intelligence initiatives. 
+            I specialize in real-time data processing, financial analytics, and data governance, 
+            ensuring accuracy, security, and efficiency in enterprise data solutions.
+        </p>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3><a href="https://github.com/Anirudh-Josuyla/project1" target="_blank">Real-Time Data Pipeline with Kafka & Snowflake</a></h3>
-            <p>Built a streaming ETL pipeline using Kafka, Snowflake, and Python to process 100M+ transactions in real-time.</p>
-        </div>
-        <div class="project">
-            <h3><a href="https://github.com/Anirudh-Josuyla/project2" target="_blank">Revenue Forecasting with Machine Learning</a></h3>
-            <p>Developed ML models using Python & Databricks, improving revenue predictions and reducing errors by 20%.</p>
-        </div>
-        <div class="project">
-            <h3><a href="https://github.com/Anirudh-Josuyla/project3" target="_blank">Automated Financial Reporting with Power BI</a></h3>
-            <p>Created a fully automated Power BI dashboard using SQL & Snowflake, reducing manual reporting effort by 50%.</p>
-        </div>
-    </section>
+        <p>
+            I hold a postgraduate degree in Computer Science and Data Engineering, 
+            where I explored machine learning, data visualization, and user-driven analytics solutions. 
+            My goal is to bridge the gap between data and decision-making, ensuring businesses can leverage data with confidence, efficiency, and innovation.
+        </p>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: anirudhjosuyla29@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/Anirudh-Josuyla/" target="_blank">linkedin.com/in/Anirudh-Josuyla</a></p>
-        <p>GitHub: <a href="https://github.com/Anirudh-Josuyla" target="_blank">github.com/Anirudh-Josuyla</a></p>
-    </section>
 
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>My Skills</h2>
+      <div class="skills-container">
+        <div class="skills-scroll">
+          <div class="skill">
+            <i class="fab fa-python"></i>
+            <h3>Python</h3>
+          </div>
+          <div class="skill">
+            <i class="fas fa-database"></i>
+            <h3>SQL</h3>
+          </div>
+          <div class="skill">
+            <i class="fas fa-cloud"></i>
+            <h3>Snowflake</h3>
+          </div>
+          <div class="skill">
+            <i class="fas fa-chart-line"></i>
+            <h3>Tableau</h3>
+          </div>
+          <div class="skill">
+            <i class="fas fa-code"></i>
+            <h3>ETL Pipelines</h3>
+          </div>
+          <div class="skill">
+            <i class="fas fa-cogs"></i>
+            <h3>Process Automation</h3>
+          </div>
+          <div class="skill">
+            <i class="fas fa-tools"></i>
+            <h3>DevOps</h3>
+          </div>
+          <div class="skill">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Data Governance</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Anirudh Josuyla. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
