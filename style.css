@@ -149,30 +149,53 @@ body {
     margin-bottom: 20px;
   }
   
-  .social-links {
+  /*social links*/
+
+/* Social Links - Fixed Size & Better Spacing */
+.social-links {
     display: flex;
     justify-content: center;
-    gap: 30px;
-  }
-  
-  .social-links a {
-    color: #00ff88;
-    font-size: 40px;
-    transition: color 0.3s ease;
-  }
-  
-  .social-links a:hover {
-    color: #fff;
-  }
-  .social-links a {
-    color: #00ff88;
-    font-size: 40px;
-    transition: color 0.3s ease;
-  }
-  
-  .social-links a:hover {
-    color: #fff;
-  }
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Uniform size */
+    height: 40px; /* Uniform size */
+    border-radius: 50%;
+    background: transparent;
+    transition: transform 0.2s ease-in-out, color 0.3s ease;
+}
+
+/* Set the icon size inside each social link */
+.social-links a i {
+    font-size: 22px; /* Adjust icon size */
+    color: #00ff88; /* Default color */
+}
+
+/* Individual colors for each social platform */
+.social-links a[href*="linkedin"] i {
+    color: #0077b5; /* LinkedIn Blue */
+}
+
+.social-links a[href*="github"] i {
+    color: #ffffff; /* White for GitHub */
+}
+
+.social-links a[href*="mailto"] i {
+    color: #ffcc00; /* Yellow for Email */
+}
+
+/* Hover effect */
+.social-links a:hover i {
+    transform: scale(1.1);
+    color: #ffffff; /* White on hover */
+}
+
   /* Footer */
   footer {
     background: #1e1e2f;
