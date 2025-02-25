@@ -1,0 +1,9 @@
+# Ignore all system and personal files
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+*.zip
+*.pdf
+*.docx
+*.xlsx
