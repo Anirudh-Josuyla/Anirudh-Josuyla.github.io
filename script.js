@@ -1,4 +1,4 @@
-// ============ Scroll Animation ============
+// ============ Scroll Animations ============
 document.addEventListener("DOMContentLoaded", function () {
     const fadeInElements = document.querySelectorAll(".fade-in");
 
@@ -33,3 +33,32 @@ function typeEffect() {
 }
 
 document.addEventListener("DOMContentLoaded", typeEffect);
+
+// ============ Dark Mode Toggle ============
+document.getElementById("dark-mode-toggle").addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+});
+
+// ============ Scroll-to-Top Button ============
+const scrollTopButton = document.getElementById("scroll-top");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        scrollTopButton.style.display = "block";
+    } else {
+        scrollTopButton.style.display = "none";
+    }
+});
+
+scrollTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// ============ Skill Bars Animation ============
+window.addEventListener("scroll", function () {
+    document.querySelectorAll(".skill-fill").forEach((bar) => {
+        if (bar.getBoundingClientRect().top < window.innerHeight - 50) {
+            bar.style.width = bar.getAttribute("data-width");
+        }
+    });
+});
