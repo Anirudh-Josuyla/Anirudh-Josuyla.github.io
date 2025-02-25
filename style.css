@@ -5,63 +5,85 @@ body {
     padding: 0;
     background-color: #1e1e2f;
     color: #fff;
-  }
-  
-  .container {
+}
+
+/* Container */
+.container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  /* Header */
-  header {
+}
+
+/* ============ Header Section ============ */
+header {
     background: url('https://source.unsplash.com/1600x900/?technology,data') no-repeat center center/cover;
     color: #fff;
     padding: 60px 0;
     text-align: center;
-  }
-  
-  header .logo {
+    position: relative;
+    background-attachment: fixed; /* Parallax effect */
+}
+
+header .logo {
     font-size: 24px;
     font-weight: bold;
-  }
-  
-  header nav {
+}
+
+header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  header .nav-links {
+}
+
+header .nav-links {
     list-style: none;
     display: flex;
-  }
-  
-  header .nav-links li {
+}
+
+header .nav-links li {
     margin: 0 15px;
-  }
-  
-  header .nav-links a {
+}
+
+header .nav-links a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-  }
-  
-  header .hero h1 {
+    transition: color 0.3s ease;
+}
+
+header .nav-links a:hover {
+    color: #00ff88;
+}
+
+header .hero h1 {
     font-size: 48px;
     margin: 20px 0;
-  }
-  
-  header .hero span {
+}
+
+header .hero .typing {
     color: #00ff88;
-  }
-  
-  header .hero p {
+    border-right: 3px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 4s steps(40, end) infinite, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+header .hero p {
     font-size: 18px;
     margin: 10px 0;
-  }
-  
-  header .btn {
+}
+
+header .btn {
     background: #00ff88;
     color: #1e1e2f;
     padding: 10px 20px;
@@ -69,89 +91,101 @@ body {
     border-radius: 5px;
     margin-top: 20px;
     display: inline-block;
-  }
-  
-  /* About Section */
-  .about {
+    transition: background 0.3s, transform 0.2s;
+}
+
+header .btn:hover {
+    background: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* ============ Fade-in Animation for Sections ============ */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============ About Section ============ */
+.about {
     padding: 60px 0;
     background: #2a2a40;
-  }
-  
-  .about h2 {
+}
+
+.about h2 {
     text-align: center;
     margin-bottom: 40px;
-  }
-  
-  .about-content {
-    text-align: center;
-  }
-  
-  /* Skills Section */
-  .skills {
+}
+
+/* ============ Skills Section ============ */
+.skills {
     padding: 60px 0;
     background: #1e1e2f;
-  }
-  
-  .skills h2 {
+}
+
+.skills h2 {
     text-align: center;
     margin-bottom: 40px;
-  }
-  
-  .skills-container {
+}
+
+.skills-container {
     overflow: hidden;
     position: relative;
-  }
-  
-  .skills-scroll {
+}
+
+.skills-scroll {
     display: flex;
     gap: 20px;
     animation: scrollSkills 20s linear infinite;
-  }
-  
-  .skills-scroll:hover {
+}
+
+.skills-scroll:hover {
     animation-play-state: paused;
-  }
-  
-  @keyframes scrollSkills {
+}
+
+@keyframes scrollSkills {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+        transform: translateX(-50%);
     }
-  }
-  
-  .skill {
+}
+
+.skill {
     background: #2a2a40;
     padding: 20px;
     text-align: center;
     border-radius: 5px;
     min-width: 200px;
-  }
-  
-  .skill i {
+}
+
+.skill i {
     font-size: 40px;
     color: #00ff88;
-  }
-  
-  .skill h3 {
+}
+
+.skill h3 {
     margin: 10px 0;
-  }
-  
-  /* Get in Touch Section */
+}
+
+/* ============ Get in Touch Section ============ */
 .get-in-touch {
     padding: 60px 0;
     background: #2a2a40;
     text-align: center;
-  }
-  
-  .get-in-touch h2 {
-    margin-bottom: 20px;
-  }
-  
-  /*social links*/
+}
 
-/* Social Links - Fixed Size & Better Spacing */
+.get-in-touch h2 {
+    margin-bottom: 20px;
+}
+
+/* Social Links */
 .social-links {
     display: flex;
     justify-content: center;
@@ -164,42 +198,27 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px; /* Uniform size */
-    height: 40px; /* Uniform size */
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: transparent;
-    transition: transform 0.2s ease-in-out, color 0.3s ease;
+    transition: transform 0.2s ease-in-out, background 0.3s ease;
 }
 
-/* Set the icon size inside each social link */
 .social-links a i {
-    font-size: 22px; /* Adjust icon size */
-    color: #00ff88; /* Default color */
+    font-size: 22px;
+    color: #00ff88;
 }
 
-/* Individual colors for each social platform */
-.social-links a[href*="linkedin"] i {
-    color: #0077b5; /* LinkedIn Blue */
+.social-links a:hover {
+    transform: scale(1.2);
+    background: rgba(255, 255, 255, 0.1);
 }
 
-.social-links a[href*="github"] i {
-    color: #ffffff; /* White for GitHub */
-}
-
-.social-links a[href*="mailto"] i {
-    color: #ffcc00; /* Yellow for Email */
-}
-
-/* Hover effect */
-.social-links a:hover i {
-    transform: scale(1.1);
-    color: #ffffff; /* White on hover */
-}
-
-  /* Footer */
-  footer {
+/* ============ Footer ============ */
+footer {
     background: #1e1e2f;
     color: #fff;
     text-align: center;
     padding: 20px 0;
-  }
+}
